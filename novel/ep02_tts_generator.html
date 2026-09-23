@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>EPIC FURY Ep02 - 나레이션 오디오 생성기</title>
+<style>
+  body { font-family: -apple-system, "Malgun Gothic", sans-serif; max-width: 900px; margin: 30px auto; padding: 0 20px; background: #f7f7f8; }
+  h1 { font-size: 20px; }
+  h2 { margin-top: 36px; border-bottom: 2px solid #333; padding-bottom: 6px; }
+  .row { display: flex; align-items: center; gap: 12px; background: white; border: 1px solid #ddd; border-radius: 8px; padding: 10px 14px; margin: 8px 0; }
+  .row.done { background: #e8f7ee; border-color: #34a853; }
+  .row.error { background: #fdeaea; border-color: #ea4335; }
+  .pid { font-weight: bold; width: 50px; flex-shrink: 0; }
+  .text { flex: 1; font-size: 13px; color: #444; }
+  button { padding: 8px 16px; border: none; border-radius: 6px; background: #4285f4; color: white; cursor: pointer; font-size: 13px; white-space: nowrap; }
+  button:disabled { background: #999; cursor: default; }
+  .status { width: 90px; font-size: 12px; color: #666; text-align: center; }
+  .toolbar { position: sticky; top: 0; background: #f7f7f8; padding: 12px 0; z-index: 10; }
+  .toolbar button { background: #34a853; font-size: 14px; padding: 10px 20px; }
+  #log { font-family: monospace; font-size: 12px; white-space: pre-wrap; background: #222; color: #0f0; padding: 10px; border-radius: 6px; max-height: 150px; overflow-y: auto; }
+</style>
+</head>
+<body>
+<h1>EPIC FURY: Night Over Hormuz — 2화 나레이션 오디오 생성기</h1>
+<p>각 줄의 <b>[생성+다운로드]</b> 버튼을 직접 클릭하세요 (자동화가 아닌 실제 클릭이라 Downloads 폴더에 정상 저장됩니다). 한 번에 여러 개를 눌러도 괜찮습니다. 파일명: <code>kr_p01.mp3</code> 등으로 자동 저장됩니다.</p>
+<div class="toolbar">
+  <button id="allBtn" onclick="runAll()">▶ 전체 순차 생성 (한 번에 하나씩, 클릭 1번으로 전부 진행)</button>
+  <span id="progress" style="margin-left:12px;font-size:13px;color:#555;"></span>
+</div>
+<div id="log"></div>
+<div id="container"></div>
+
+<script>
+const TYPECAST_KEY = '__pltRh46VWJwBwajvCzshXxUjhsKva2CCpRT6zgMRt7t';
+const ELEVENLABS_KEY = 'sk_5ee22c8e9c4cd043aea8e30c42b00d3077e154e45455bad7';
+const KR_VOICE = 'tc_6296a815b958a8ed9610b189'; // Inhwa
+const JP_VOICE = 'tc_62baac31e1c614d37b9160e3'; // Ryouta Takahashi
+const EN_VOICE = 'pqHfZKP75CvOlQylNhV4'; // Bill
+
+const KR = {
+p01:`CIA 이란 작전센터. 레일라 시라지 박사가 포르도 핵시설 지구의 전자기 신호 모니터를 응시했다. 타격 이후 침묵해야 할 채널에서, 5.7초 간격의 신호가 맥박처럼 반복되고 있었다. 원심분리기 가동 신호였다.`,
+p02:`故 하메네이의 차남 모즈타바 하메네이가 새 최고지도자로 지명됐다. 성직자 서열 미달 논란 속에, 그는 지하 벙커에서 명령을 내렸다: '진실의 약속 4를 지금 실행한다.' IRGC 미사일 사령관은 이미 그 명령을 기다리고 있었다.`,
+p03:`IRGC 탄도미사일 발사체가 공중에 떴다. 6발, 12발, 숫자가 계속 올라갔다. 표적은 미나살만 항 — 5함대 기지. 사드와 패트리엇이 연동 요격에 들어갔다. 미사일은 바레인 영공 안에서 폭발했다. 충격파가 지하 지휘소 바닥을 흔들었다.`,
+p04:`하메네이 사망 발표 두 시간 뒤, 거리에는 두 종류의 군중이 있었다. 대피하는 사람들과 모이는 사람들. '자유! 이란은 자유다!' 노랫소리가 총성 사이로 번졌다. 바시즈가 진압에 나섰다 — 그러나 일부는, 발이 멈췄다.`,
+p05:`호르무즈 해협이 사실상 봉쇄됐다. IRGC 해군이 기뢰를 살포하고 수중 드론을 배치했다. 상업 유조선의 통과가 전면 차단됐다. 국제 유가는 배럴당 150달러를 돌파했다 — 2022년 이후 최고치였다.`,
+p06:`레일라 시라지 박사는 세 번째 커피를 내려놓으려다 손을 멈췄다. 포르도 핵시설 지구 전자기 신호 모니터가 있어서는 안 될 것을 보여주고 있었다. 신호는 끊어졌다 다시 나타나며 5.7초 간격으로 맥박처럼 반복됐다. 원심분리기 가동 신호였다. 지하 80미터, 벙커버스터조차 온전히 뚫지 못한 그 시설이 — 여전히 돌아가고 있었다. "샘, 지금 당장 와." 위성 분석 선임 샘 패럴이 화면을 보고 조용히 욕을 뱉었다. "진동 패턴이 규칙적이야, 붕괴가 아니야." 레일라가 말했다. "이게 IR-6 가동 주파수야. 7년간 이것만 분석했어." 세상이 불타는 동안, 최고지도자가 죽는 동안, 지하 어딘가에서 누군가는 기계를 끄지 않기로 선택하고 있었다.`,
+p07:`모즈타바 하메네이, 56세. 아버지의 눈을 가진 남자가 지하 벙커의 금속 의자에 앉아 있었다. 공식 직책은 없었으나 30년간 아버지의 그림자 행정부를 집행해온 그가, 이제 이란의 새 최고지도자였다. 전문가 회의 건물이 폭격당한 뒤, 형식적인 투표만으로 그 자리에 올랐다. "진실의 약속 4. 지금 당장 실행합니다." 그의 목소리는 낮고 또렷했다, 아버지처럼. IRGC 미사일 사령관이 고개를 끄덕였다 — 명령이 오기 전부터 발사 시퀀스는 준비돼 있었다. 아무도 입 밖에 내지 않은 사실이 있었다. 이틀 만에 탄도미사일 비축량이 이미 상당량 소진됐다는 것. 벙커 밖, 테헤란은 불타고 있었다.`,
+p08:`김준호 대위, 29세. 미사일 경보 사이렌이 울릴 때 그는 화장실에 있었다. 지하 지휘소로 뛰어들어간 순간 화면이 보였다 — IRGC 탄도미사일이 이미 공중에 있었다. 6발, 12발, 표적은 미나살만 항. 그가 있는 곳이었다. 사드와 패트리엇이 연동 작동했다. 미사일들은 바레인 영공 안에서 폭발했다. 그는 책상 다리를 잡은 손이 떨리는 것을 느꼈다. 모두 요격됐다, 이번 파에서는. 그러나 IRGC는 다음 파를 보냈다. 전쟁 이틀째, 그는 아직 자신의 목소리가 떨린다는 것을 아무에게도 들키고 싶지 않았다.`,
+p09:`하메네이 사망 발표 두 시간 뒤, 거리에는 두 종류의 군중이 있었다. 대피하는 사람들과 모이는 사람들. 히잡이 허공에 던져졌다. "자유! 자유! 이란은 자유다!" — 47년간 눌려 있던 무언가가 폭탄보다 먼저 터져 나왔다. 그리고 바시즈가 왔다. 소라야 타히르, 22세. 샤리프 공대 3학년. 2022년 시위 때도 거리에 있었고, 체포됐고, 풀려났다. 이번엔 히잡 없이 다시 나왔다. 최루 가스와 경찰봉 다음 — 일부 바시즈 조직원들의 발이 멈췄다. 그 얼굴에 이름을 붙인다면, 그것은 '나도 모르겠다'였다. 폭탄은 멈추지 않는다. 그러나 사람은, 가끔 멈춘다.`,
+p10:`마커스 웹 함장은 52시간 동안 잠들지 못했다. 그러나 손은 여전히 고요했다. 호르무즈 해협은 사실상 봉쇄됐다 — IRGC가 기뢰를 살포하고 수중 드론을 배치했다. 유가는 배럴당 150달러를 넘었다. 매 시간이 지날수록 봉쇄의 경제적 비용은 기하급수적으로 커지고 있었다. 이것이 이란의 전략이었다. 세라 캘러한이 그의 옆에 섰다. "나리만이라는 아이 기사를 보냈어요. 에빈 구, 어머니가 콘크리트 아래서 찾아냈어요." "당신의 드론이 만들었어요." 그녀가 조용히 말했다. 비난이 아니라 사실로서. 그는 대답하지 않았다. 대답이 없다는 것이 대답이었다.`,
+p11:`콜사인 사바. 이스라엘 공군 소령, 35세. F-35I 아디르 전대를 이끌고 테헤란 상공을 통과하는 세 번째 임무. 레이더가 잡혔다 — 이란의 노후 훈련기 Yak-130. 도망가지 않기로 한, 어쩌면 그것이 상대 조종사의 선택이었다. 교전은 34초였다. AIM-120C 암람이 발사되고, Yak-130이 플레어를 전개했지만 소용없었다. F-35가 실전에서 유인 전투기를 격추한 것은 인류 역사상 처음이었다. 사바는 무선 보고를 했다, 목소리는 평정했다. 그 34초 속에 무엇이 있었는지는, 보고서에 담기지 않았다.`,
+p12:`아자드 모라디 교수는 53년 만에 처음으로 서랍을 열었다. 1973년, 스물한 살에 산 공책. 첫 페이지엔 이렇게 적혀 있었다 — '진리는 불편하다. 그러나 거짓말은 더 오래 고통스럽다.' 창밖에선 검은 연기 대신, 노랫소리가 들렸다. 히잡 없이, 남녀가 함께 부르는 노래. 1979년 이전 이후 47년 만이었다. 그는 마지막 빈 페이지에 펜을 들었다. '나는 슬퍼하지 않는다 — 그것이 배신인지 진실인지 나는 모르겠다. 그러나 이것만은 안다. 지금 저 목소리들이 들린다는 것을.' 그는 펜을 내려놓았다. 노래는 계속됐다. 폭탄은 부수는 것으로 끝나지만, 노래는 무언가를 세우려는 의지였다.`,
+p13:`보고서를 올린 지 34시간 만에 회의가 소집됐다. "포르도 지하 시설 일부가 여전히 가동 중일 가능성, 85% 이상." 회의실이 조용해졌다. "추가 타격 권고야?" 누군가 물었다. "그건 제 결정 사항이 아닙니다." 레일라가 말했다. "저는 정보를 제공해요. 그 정보로 무엇을 할지는 다른 사람들의 결정이에요." 사실이었다. 그리고 동시에, 그 정보가 다음 결정을 만든다는 것도 그녀는 알고 있었다. 복도를 걸으며 그녀는 창밖 버지니아의 파란 하늘을 보았다. 5,600마일 떨어진 테헤란의 하늘은 검었다. 그녀는 다시 자리로 돌아갔다. 모니터가, 신호가, 전쟁이 기다리고 있었다.`
+};
+
+const EN = {
+p01:`CIA's Iran Operations Center. Dr. Leila Shirazi stared at the electromagnetic signal monitor for the Fordow nuclear site. On a channel that should have gone silent after the strike, a signal pulsed every 5.7 seconds like a heartbeat. It was the signature of spinning centrifuges.`,
+p02:`The late Khamenei's second son, Mojtaba Khamenei, was named the new Supreme Leader. Amid controversy over his insufficient clerical rank, he issued the order from an underground bunker: 'Execute Promise of Truth 4 — now.' The IRGC's missile commander had already been waiting for it.`,
+p03:`IRGC ballistic missiles climbed into the sky. Six, then twelve — the count kept rising. The target: Mina Salman Port, home of the 5th Fleet. THAAD and Patriot batteries linked up for a coordinated intercept. The missiles detonated inside Bahraini airspace. The shockwave shook the floor of the underground command center.`,
+p04:`Two hours after Khamenei's death was announced, the streets held two kinds of crowds: those fleeing, and those gathering. 'Freedom! Iran is free!' The chant spread between gunshots. The Basij moved to crush it — but some of them stopped where they stood.`,
+p05:`The Strait of Hormuz was effectively sealed. The IRGC Navy laid mines and deployed underwater drones. All commercial tanker traffic was blocked outright. Global oil prices broke $150 a barrel — the highest since 2022.`,
+p06:`Dr. Leila Shirazi's hand froze halfway to setting down her third cup of coffee. The electromagnetic signal monitor for the Fordow nuclear site was showing something it had no business showing. The signal cut out, reappeared, pulsed every 5.7 seconds like a heartbeat. It was the signature of spinning centrifuges. Eighty meters underground, in a facility even the bunker-busters hadn't fully penetrated — something was still running. "Sam, get over here. Now." Sam Farrell, the senior satellite analyst, looked at the screen and swore quietly under his breath. "The vibration pattern is regular — this isn't structural collapse," Leila said. "This is the IR-6 operating frequency. I've spent seven years studying nothing else." While the world burned, while a Supreme Leader lay dead, somewhere underground someone had chosen not to shut the machines down.`,
+p07:`Mojtaba Khamenei, 56. A man with his father's eyes sat on a metal chair in the underground bunker. He had held no official title, yet for thirty years he had run his father's shadow administration — and now he was Iran's new Supreme Leader. After the Assembly of Experts building was bombed, a mere formality of a vote had put him in the chair. "Promise of Truth 4. Execute it now." His voice was low and clear, just like his father's. The IRGC's missile commander nodded — the launch sequence had been armed before the order even came. There was one fact no one said aloud: in just two days, a substantial share of the ballistic missile stockpile was already gone. Outside the bunker, Tehran was burning.`,
+p08:`Captain Kim Junho, 29. He was in the restroom when the missile alarm sounded. By the time he sprinted into the underground command post, the screen already told the story — IRGC ballistic missiles were already airborne. Six, then twelve. Target: Mina Salman Port. Where he stood. THAAD and Patriot fired in coordination. The missiles detonated inside Bahraini airspace. He felt his hand shaking where it gripped the edge of the desk. Every one intercepted — this wave. But the IRGC sent another. Two days into the war, and he still didn't want anyone to notice that his voice was shaking.`,
+p09:`Two hours after Khamenei's death was announced, the streets held two kinds of crowds: those fleeing, and those gathering. Hijabs flew into the air. "Freedom! Freedom! Iran is free!" — something that had been held down for forty-seven years broke loose before the bombs did. And then the Basij came. Soraya Tahir, 22. A junior at Sharif University of Technology. She'd been on the streets in the 2022 protests too — arrested, then released. This time she came out again, without a hijab. After the tear gas and the batons — some of the Basij simply stopped moving. If that look on their faces had a name, it was "I don't know anymore." Bombs don't stop. People, sometimes, do.`,
+p10:`Captain Marcus Webb hadn't slept in fifty-two hours. His hands were still steady. The Strait of Hormuz was effectively sealed — the IRGC had laid mines and deployed underwater drones. Oil had crossed $150 a barrel. With every hour, the economic cost of the blockade climbed exponentially. That was Iran's strategy. Sarah Callahan stood beside him. "I sent you the story about a kid named Nariman. Near the old Evin site — his mother found him under the concrete." "Your drones made that," she said quietly. Not as an accusation. As a fact. He didn't answer. The silence was the answer.`,
+p11:`Callsign Saba. Israeli Air Force Major, 35. Her third mission leading an F-35I Adir squadron over Tehran. Radar picked up a contact — an aging Iranian Yak-130 trainer. Not to run — that, perhaps, was the choice its pilot had made. The engagement lasted thirty-four seconds. An AIM-120C AMRAAM fired; the Yak-130 popped flares, to no effect. It was the first time in human history an F-35 had shot down a manned fighter in combat. Saba radioed her report, her voice level. What had actually happened in those thirty-four seconds never made it into the record.`,
+p12:`Professor Azad Moradi opened the drawer for the first time in fifty-three years. A notebook he'd bought at twenty-one, in 1973. Its first page read: "Truth is uncomfortable. But a lie hurts longer." Outside his window, instead of black smoke, there was singing — men and women, together, without a hijab in sight. The first time since before 1979. Forty-seven years. He lifted his pen to the last blank page. "I am not grieving — whether that makes me a traitor or simply honest, I don't know. But this much I know: right now, I can hear those voices." He set the pen down. The singing went on. A bomb only ever ends in destruction. A song is the will to build something.`,
+p13:`Thirty-four hours after she filed her report, the meeting was called. "Greater than 85 percent probability that part of the Fordow underground facility remains operational." The room went quiet. "Are you recommending a follow-on strike?" someone asked. "That's not my call to make," Leila said. "I provide the intelligence. What's done with it is someone else's decision." It was true. And at the same time, she knew that intelligence was exactly what shaped the next decision. Walking the corridor, she looked out at Virginia's blue sky. Five thousand six hundred miles away, the sky over Tehran was black. She went back to her station. The monitor, the signal, the war — all of it was waiting.`
+};
+
+const JP = {
+p01:`CIAイラン作戦センター。レイラ・シラジ博士はフォルドウ核施設地区の電磁信号モニターを見つめていた。攻撃後は沈黙しているはずのチャンネルで、5.7秒間隔の信号が脈動のように繰り返されていた。遠心分離機が稼働している信号だった。`,
+p02:`故ハメネイ師の次男、モジュタバ・ハメネイが新最高指導者に指名された。聖職者としての序列不足を巡る論議の中、彼は地下バンカーから命令を下した——「真実の約束4を今すぐ実行せよ」。IRGCのミサイル司令官は、その命令をすでに待っていた。`,
+p03:`IRGCの弾道ミサイルが空へ舞い上がった。6発、12発——数はなおも増えていく。標的はミナサルマン港、第5艦隊基地。THAADとパトリオットが連動して迎撃態勢に入った。ミサイルはバーレーン領空内で爆発した。衝撃波が地下指揮所の床を揺らした。`,
+p04:`ハメネイ師死亡発表から2時間後、街には二種類の群衆がいた。避難する人々と、集まる人々。「自由だ！ イランは自由だ！」——銃声の合間を歌声が縫うように広がった。バシジが鎮圧に乗り出した——だが一部の足は、止まった。`,
+p05:`ホルムズ海峡は事実上封鎖された。IRGC海軍が機雷を敷設し、水中ドローンを展開した。商業タンカーの通過は全面的に遮断された。国際原油価格は1バレル150ドルを突破——2022年以来の最高値だった。`,
+p06:`レイラ・シラジ博士は三杯目のコーヒーを置こうとした手を止めた。フォルドウ核施設地区の電磁信号モニターが、あってはならないものを映していた。信号は途切れては再び現れ、5.7秒間隔で脈動のように繰り返された。遠心分離機が稼働している信号だった。地下80メートル、バンカーバスターですら完全には貫けなかったその施設が——なおも稼働していた。「サム、今すぐ来て」。衛星分析担当の上級アナリスト、サム・ファレルは画面を見て、小さく毒づいた。「振動パターンは規則的よ、崩壊じゃない」とレイラは言った。「これはIR-6の稼働周波数。7年間、これだけを分析してきたの」。世界が燃え、最高指導者が死んでいくその間も、地下のどこかで誰かが機械を止めないことを選んでいた。`,
+p07:`モジュタバ・ハメネイ、56歳。父と同じ目をした男が、地下バンカーの金属椅子に座っていた。公式の肩書きは持たなかったが、30年間父の影の政権を執行してきた彼が、いまやイランの新最高指導者だった。専門家会議の建物が爆撃された後、形だけの投票でその座に就いた。「真実の約束4。今すぐ実行する」。その声は低く、はっきりしていた——父と同じように。IRGCのミサイル司令官がうなずいた——命令が届く前から、発射シーケンスはすでに準備されていた。誰も口にしない事実があった。わずか二日で、弾道ミサイルの備蓄はすでにかなりの量が消費されていたということ。バンカーの外では、テヘランが燃えていた。`,
+p08:`キム・ジュンホ大尉、29歳。ミサイル警報のサイレンが鳴った時、彼は化粧室にいた。地下指揮所へ駆け込んだ瞬間、画面が目に入った——IRGCの弾道ミサイルはすでに空にあった。6発、12発、標的はミナサルマン港。彼のいる場所だった。THAADとパトリオットが連動して作動した。ミサイル群はバーレーン領空内で爆発した。デスクの縁をつかむ手が震えているのを彼は感じた。すべて迎撃された、この波では。だがIRGCは次の波を送ってきた。開戦から二日目、彼はまだ自分の声が震えていることを誰にも気づかれたくなかった。`,
+p09:`ハメネイ師死亡発表から2時間後、街には二種類の群衆がいた。避難する人々と、集まる人々。ヒジャブが宙に投げられた。「自由だ！自由だ！イランは自由だ！」——47年間押し込められていた何かが、爆弾よりも先に噴き出した。そしてバシジがやって来た。ソラヤ・タヒル、22歳。シャリフ工科大学3年生。2022年のデモの時も街にいて、逮捕され、釈放された。今回はヒジャブなしで再び姿を現した。催涙ガスと警棒の後——一部のバシジ隊員の足が止まった。その表情に名前をつけるなら、それは「もうわからない」だった。爆弾は止まらない。だが人は、時に止まる。`,
+p10:`マーカス・ウェッブ艦長は52時間、眠っていなかった。それでも手は依然として静かだった。ホルムズ海峡は事実上封鎖された——IRGCが機雷を敷設し、水中ドローンを展開したのだ。原油価格は1バレル150ドルを超えた。時間が経つごとに、封鎖の経済的コストは指数関数的に膨らんでいた。それがイランの戦略だった。セーラ・キャラハンが彼の横に立った。「ナリマンという子どもの記事を送ったわ。旧エビン刑務所跡地の近く、母親がコンクリートの下から見つけたの」。「あなたのドローンが作ったのよ」と彼女は静かに言った。非難ではなく、事実として。彼は答えなかった。答えがないことが、答えだった。`,
+p11:`コールサイン、サバ。イスラエル空軍少佐、35歳。F-35Iアディール戦隊を率いてテヘラン上空を通過する三度目の任務。レーダーが捉えた——イランの旧式練習機Yak-130。逃げないと決めた、それが相手パイロットの選択だったのかもしれない。交戦は34秒だった。AIM-120Cアムラームが発射され、Yak-130がフレアを展開したが、無駄だった。F-35が実戦で有人戦闘機を撃墜したのは、人類史上初めてのことだった。サバは無線で報告した、声は平静だった。その34秒の中に何があったのかは、報告書には記されなかった。`,
+p12:`アーザード・モラディ教授は53年ぶりに、初めて引き出しを開けた。1973年、21歳の時に買ったノート。最初のページにはこう記されていた——「真実は不快だ。だが嘘はもっと長く苦しめる」。窓の外からは、黒煙の代わりに歌声が聞こえた。ヒジャブなしで、男女が共に歌う声。1979年以前以来、47年ぶりのことだった。彼は最後の白紙のページにペンを取った。「私は悲しんでいない——それが裏切りなのか、真実なのか、自分でもわからない。だがこれだけは知っている。今、あの声たちが聞こえるということを」。彼はペンを置いた。歌は続いていた。爆弾は破壊で終わる。だが歌は、何かを築こうとする意志だった。`,
+p13:`報告書を提出してから34時間後、会議が招集された。「フォルドウ地下施設の一部が、なお稼働している可能性、85%以上」。会議室が静まり返った。「追加攻撃を勧告するのか?」と誰かが尋ねた。「それは私が決めることではありません」とレイラは言った。「私は情報を提供します。その情報をどう使うかは、他の人たちが決めることです」。それは事実だった。そして同時に、その情報が次の決定を形作るということも、彼女は知っていた。廊下を歩きながら、彼女は窓の外、バージニアの青い空を見た。5,600マイル離れたテヘランの空は黒かった。彼女は再び席に戻った。モニターが、信号が、戦争が待っていた。`
+};
+
+function log(msg) {
+  const el = document.getElementById('log');
+  el.textContent += msg + '\n';
+  el.scrollTop = el.scrollHeight;
+}
+
+function buildRows() {
+  const container = document.getElementById('container');
+  const groups = [['kr','KR (Typecast · Inhwa)', KR], ['en','EN (ElevenLabs · Bill)', EN], ['jp','JP (Typecast · Ryouta Takahashi)', JP]];
+  for (const [prefix, title, texts] of groups) {
+    const h2 = document.createElement('h2');
+    h2.textContent = title;
+    container.appendChild(h2);
+    for (const [pid, text] of Object.entries(texts)) {
+      const row = document.createElement('div');
+      row.className = 'row';
+      row.id = `row_${prefix}_${pid}`;
+      row.innerHTML = `<span class="pid">${prefix}_${pid}</span><span class="text">${text.slice(0,70)}...</span><span class="status" id="status_${prefix}_${pid}">대기</span><button onclick="generateOne('${prefix}','${pid}')">생성+다운로드</button>`;
+      container.appendChild(row);
+    }
+  }
+}
+
+async function generateOne(prefix, pid) {
+  const row = document.getElementById(`row_${prefix}_${pid}`);
+  const status = document.getElementById(`status_${prefix}_${pid}`);
+  const btn = row.querySelector('button');
+  const texts = prefix === 'kr' ? KR : (prefix === 'en' ? EN : JP);
+  const text = texts[pid];
+  btn.disabled = true;
+  status.textContent = '생성 중...';
+  try {
+    let blob;
+    if (prefix === 'en') {
+      const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${EN_VOICE}`, {
+        method: 'POST',
+        headers: { 'xi-api-key': ELEVENLABS_KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, model_id: 'eleven_multilingual_v2' })
+      });
+      if (!res.ok) throw new Error(await res.text());
+      blob = await res.blob();
+    } else {
+      const voice_id = prefix === 'kr' ? KR_VOICE : JP_VOICE;
+      const res = await fetch('https://api.typecast.ai/v1/text-to-speech', {
+        method: 'POST',
+        headers: { 'X-API-KEY': TYPECAST_KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: 'ssfm-v30', text, voice_id, output: { audio_format: 'mp3' } })
+      });
+      if (!res.ok) throw new Error(await res.text());
+      blob = await res.blob();
+    }
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${prefix}_${pid}.mp3`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 30000);
+    status.textContent = `완료 (${(blob.size/1024).toFixed(0)}KB)`;
+    row.className = 'row done';
+    log(`OK: ${prefix}_${pid}.mp3 (${blob.size} bytes)`);
+  } catch (e) {
+    status.textContent = '오류';
+    row.className = 'row error';
+    log(`ERROR: ${prefix}_${pid} - ${e.message}`);
+    btn.disabled = false;
+  }
+}
+
+let allQueue = [];
+let allRunning = false;
+async function runAll() {
+  if (allRunning) return;
+  allRunning = true;
+  document.getElementById('allBtn').disabled = true;
+  const groups = [['kr', KR], ['en', EN], ['jp', JP]];
+  allQueue = [];
+  for (const [prefix, texts] of groups) {
+    for (const pid of Object.keys(texts)) {
+      const status = document.getElementById(`status_${prefix}_${pid}`);
+      if (status.textContent.startsWith('완료')) continue; // skip already done
+      allQueue.push([prefix, pid]);
+    }
+  }
+  let i = 0;
+  for (const [prefix, pid] of allQueue) {
+    i++;
+    document.getElementById('progress').textContent = `진행 중: ${i}/${allQueue.length} (${prefix}_${pid})`;
+    await generateOne(prefix, pid);
+    await new Promise(r => setTimeout(r, 600));
+  }
+  document.getElementById('progress').textContent = `완료: ${allQueue.length}개 처리됨`;
+  document.getElementById('allBtn').disabled = false;
+  allRunning = false;
+}
+
+buildRows();
+</script>
+</body>
+</html>
