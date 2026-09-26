@@ -1,0 +1,210 @@
+{
+ "en": {
+  "ui": {
+   "l0": "EPIC FURY · WAR FICTION",
+   "l1": "EPIC FURY",
+   "l2": "NIGHT OVER HORMUZ",
+   "ep": "Episode 3 · The Mathematics of the Truce",
+   "foot": "Full story — <b>link in profile</b>",
+   "scene": "SCENE {n} / 8",
+   "end": "Continued in Episode 4",
+   "sans": "Inter",
+   "serif": "Source Serif 4",
+   "fonts": "family=Inter:wght@600;700;800;900&family=Source+Serif+4:ital,wght@0,700;0,900;1,700",
+   "capfs": 104
+  },
+  "scenes": {
+   "1": {
+    "place": "Islamabad, Pakistan · A Private Meeting Room",
+    "time": "March 4, 2026 · 2:15 PM",
+    "title": "The Negotiating Table",
+    "lines": {
+     "0": "The air conditioning was broken. Twelve people sweated anyway.",
+     "1": "\"Seventy-two hours,\" the American side said.",
+     "2": "\"Fordow is not on this agenda.\"",
+     "3": "Wars begin with gunfire, but their real weight is often decided in rooms where no one says anything at all."
+    }
+   },
+   "2": {
+    "place": "Langley, Virginia · CIA Iran Operations Center",
+    "time": "March 4, 2026 · 5:08 AM EST",
+    "title": "A Signal That Wouldn't Die",
+    "lines": {
+     "0": "Dr. Leila Shirazi checked the signal three times.",
+     "1": "The assessment read \"fully neutralized.\" But the signal held a regular rhythm.",
+     "2": "A truly dead system couldn't do that.",
+     "3": "The last transmission from a source codenamed ZARRIN: \"This is the last transmission.\""
+    }
+   },
+   "3": {
+    "place": "Jerusalem, Israel · PM's Underground Situation Room",
+    "time": "March 5, 2026",
+    "title": "Notified, Not Consulted",
+    "lines": {
+     "0": "Washington's 72-hour proposal arrived as a notification, not a consultation.",
+     "1": "Israel had been left out of the Islamabad channel.",
+     "2": "The world read it as a warning.",
+     "3": "It wasn't a warning. It was the announcement of a decision already made."
+    }
+   },
+   "4": {
+    "place": "Strait of Hormuz, Northern Lane · USS Gerald R. Ford",
+    "time": "March 7, 2026",
+    "title": "The World Breathes Again",
+    "lines": {
+     "0": "A throat carrying a fifth of the world's oil opened again after six days.",
+     "1": "\"The strait's open.\" \"Limited. Northern lane only.\"",
+     "2": "On the horizon, the silhouette of a tanker appeared.",
+     "3": "As long as Fordow's signal was alive, the war was not over."
+    }
+   },
+   "5": {
+    "place": "Bahrain · Fifth Fleet Quarters, Mina Salman",
+    "time": "Day 6 of the war · past midnight in Seoul",
+    "title": "The Call, Six Days Late",
+    "lines": {
+     "0": "Nine times Captain Kim Junho tried to call. Nine times he stopped.",
+     "1": "His mother picked up on the second ring. She'd been waiting.",
+     "2": "\"Junho.\" Two syllables were enough.",
+     "3": "\"I'm alive.\" \"I know. Sleep well.\" She asked nothing else."
+    }
+   },
+   "6": {
+    "place": "Tehran · Azadi Square",
+    "time": "March 6, 2026 · 4:30 PM",
+    "title": "Spring Older Than the War",
+    "lines": {
+     "0": "Soraya Tahir stood in the middle of Azadi Square and sang.",
+     "1": "An old Persian song for the end of winter, for flowers opening.",
+     "2": "One Basij member set his baton down on the pavement and sang along.",
+     "3": "Spring didn't stop. Spring is older than the war."
+    }
+   },
+   "7": {
+    "place": "University of Tehran · Philosophy Department",
+    "time": "March 7, 2026",
+    "title": "The Last Page, After 53 Years",
+    "lines": {
+     "0": "Professor Azad Moradi opened the last blank page of a notebook he'd bought in 1973.",
+     "1": "\"Freedom is uncomfortable too. But repression hurts longer.\"",
+     "2": "From the courtyard, the singing rose again."
+    }
+   },
+   "8": {
+    "place": "Langley, Virginia · CIA Iran Operations Center",
+    "time": "March 7, 2026",
+    "title": "The Sentence She Rewrote",
+    "lines": {
+     "0": "Fordow's signal changed again. Its strength was rising.",
+     "1": "\"Kinetic intervention alone is not sufficient. The next step is diplomatic.\"",
+     "2": "Bombs bring down buildings, but a signal doesn't stop for a bomb.",
+     "3": "Continued in Episode 4."
+    }
+   }
+  }
+ },
+ "jp": {
+  "ui": {
+   "l0": "EPIC FURY · 仮想戦記",
+   "l1": "エピック・フューリー",
+   "l2": "ホルムズの夜",
+   "ep": "第3話 · 休戦の数学",
+   "foot": "続きは<b>プロフィールのリンク</b>から",
+   "scene": "シーン {n} / 8",
+   "end": "第4話へ続く",
+   "sans": "Noto Sans JP",
+   "serif": "Noto Serif JP",
+   "fonts": "family=Noto+Sans+JP:wght@600;700;800;900&family=Noto+Serif+JP:wght@700;900",
+   "capfs": 108
+  },
+  "scenes": {
+   "1": {
+    "place": "パキスタン・イスラマバード · 非公開の会議室",
+    "time": "2026.03.04 · 午後2:15",
+    "title": "交渉のテーブル",
+    "lines": {
+     "0": "空調は壊れていた。それでも十二人が汗をかいていた。",
+     "1": "「72時間です」と米国側が言った。",
+     "2": "「フォルドウは、この協議の議題ではありません」",
+     "3": "戦争は銃声で始まるが、その本当の重さは、しばしば誰も何も言わない部屋で決まる。"
+    }
+   },
+   "2": {
+    "place": "米国ラングレー · CIAイラン作戦センター",
+    "time": "2026.03.04 · 午前5:08(米東部)",
+    "title": "死ななかった信号",
+    "lines": {
+     "0": "レイラ・シラジ博士は信号を三度確認した。",
+     "1": "評価は「完全無力化」だった。しかし信号は規則性を保っていた。",
+     "2": "完全に死んだシステムには、それはできない。",
+     "3": "コードネーム「ザリーン」の最終送信。「これが最後の送信だ」"
+    }
+   },
+   "3": {
+    "place": "イスラエル・エルサレム · 首相府地下状況室",
+    "time": "2026.03.05",
+    "title": "協議ではなく通告",
+    "lines": {
+     "0": "ワシントンの72時間提案は、通告として届いた。協議ではなかった。",
+     "1": "イスラエルはイスラマバード・チャンネルから外されていた。",
+     "2": "世界はそれを警告として読んだ。",
+     "3": "しかしそれは警告ではなく、すでに下された決定の発表だった。"
+    }
+   },
+   "4": {
+    "place": "ホルムズ海峡北側航路 · 空母フォード",
+    "time": "2026.03.07",
+    "title": "世界がまた息をする",
+    "lines": {
+     "0": "世界の原油輸送量の20%が通る喉笛が、六日ぶりに再び開いた。",
+     "1": "「海峡が開きました」「まだ限定的です。北側航路だけ」",
+     "2": "水平線にタンカー一隻の輪郭が見えた。",
+     "3": "フォルドウの信号が生きている限り、戦争は終わっていなかった。"
+    }
+   },
+   "5": {
+    "place": "バーレーン · 第5艦隊宿舎、ミナサルマン港",
+    "time": "開戦6日目 · 真夜中過ぎのソウル",
+    "title": "六日ぶりの電話",
+    "lines": {
+     "0": "キム・ジュンホ大尉は、九回かけようとして、九回とも止めた。",
+     "1": "二回目の呼び出しで母が出た。待っていたのだ。",
+     "2": "「ジュンホ」。その二音節で十分だった。",
+     "3": "「生きてます」「知ってる。よく休んで」。母はそれ以上、何も尋ねなかった。"
+    }
+   },
+   "6": {
+    "place": "テヘラン · アザディ広場",
+    "time": "2026.03.06 · 午後4:30",
+    "title": "戦争より古い春",
+    "lines": {
+     "0": "ソラヤ・タヒルはアザディ広場の真ん中で歌を歌った。",
+     "1": "冬が終わり花が咲くことを歌う、古いペルシャの春の歌だった。",
+     "2": "バシジ隊員の一人が警棒を地面に置き、一緒に歌った。",
+     "3": "春は止まらなかった。春は戦争より古いのだから。"
+    }
+   },
+   "7": {
+    "place": "テヘラン大学 · 哲学科研究室",
+    "time": "2026.03.07",
+    "title": "53年ぶりに埋まった最後のページ",
+    "lines": {
+     "0": "アーザード・モラディ教授は、1973年に買ったノートの最後の白紙ページを開いた。",
+     "1": "「自由も不快だ。だが抑圧はもっと長く苦しめる」",
+     "2": "中庭から、また歌声が聞こえてきた。"
+    }
+   },
+   "8": {
+    "place": "米国ラングレー · CIAイラン作戦センター",
+    "time": "2026.03.07",
+    "title": "彼女が書き直した一文",
+    "lines": {
+     "0": "フォルドウの信号が再び変化した。強度が上がっていた。",
+     "1": "「動的介入だけでは十分ではない。次の段階は外交的介入だ」",
+     "2": "爆弾は建物を壊すが、信号は爆弾では止まらない。",
+     "3": "第4話へ続く。"
+    }
+   }
+  }
+ }
+}
