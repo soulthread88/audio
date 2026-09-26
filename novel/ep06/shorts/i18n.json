@@ -1,0 +1,210 @@
+{
+ "en": {
+  "ui": {
+   "l0": "EPIC FURY · WAR FICTION",
+   "l1": "EPIC FURY",
+   "l2": "NIGHT OVER HORMUZ",
+   "ep": "Episode 6 · The Morning of Larijani",
+   "foot": "Full story — <b>link in profile</b>",
+   "scene": "SCENE {n} / 8",
+   "end": "Continued in Episode 7",
+   "sans": "Inter",
+   "serif": "Source Serif 4",
+   "fonts": "family=Inter:wght@600;700;800;900&family=Source+Serif+4:ital,wght@0,700;0,900;1,700",
+   "capfs": 104
+  },
+  "scenes": {
+   "1": {
+    "place": "Washington, D.C. · White House Situation Room",
+    "time": "March 16, 2026 · 12:47 AM",
+    "title": "The Moment No One Stands",
+    "lines": {
+     "0": "Fourteen monitors turned red at once.",
+     "1": "\"NATO's out, sir. Japan too. Korea. Australia.\"",
+     "2": "An alliance is a system, and systems always flow toward their own interests.",
+     "3": "A war you start alone, you finish alone."
+    }
+   },
+   "2": {
+    "place": "Seoul · The Foreign Minister's Office",
+    "time": "March 16, 2026 · 8:30 AM KST",
+    "title": "A Two-Line Cable",
+    "lines": {
+     "0": "The cable from the U.S. Embassy was two lines long. Join the Hormuz operation.",
+     "1": "The reply had already gone out under his name.",
+     "2": "\"We support it, but we won't take part. That's all.\"",
+     "3": "Refusals always arrive in a properly formatted document."
+    }
+   },
+   "3": {
+    "place": "Kuwait City · Salmiya District",
+    "time": "March 16, 2026 · 11:47 PM",
+    "title": "A Night Without Power",
+    "lines": {
+     "0": "The children were asleep. Then the ceiling shook.",
+     "1": "Her five-year-old cried, not even sure why.",
+     "2": "Smoke rose from the building next door. There were no lights.",
+     "3": "In the darkness a war leaves behind, the ones who cry are always the children."
+    }
+   },
+   "4": {
+    "place": "Above North Tehran · F-35I Cockpit",
+    "time": "March 17, 2026 · 3:18 AM",
+    "title": "The Two-Finger Rule",
+    "lines": {
+     "0": "The pilot checked the coordinates. Then checked again.",
+     "1": "The release button takes two fingers. One is a mistake. Two is a decision.",
+     "2": "At 5:12 AM, Iranian state TV confirmed Larijani's death.",
+     "3": "The oldest channel in Iran's nuclear diplomacy had closed."
+    }
+   },
+   "5": {
+    "place": "Ramat Gan, Israel · A Residential District",
+    "time": "March 17, 2026 · 6:41 AM",
+    "title": "The Morning the War Came",
+    "lines": {
+     "0": "The retaliation came one hour and forty-two minutes later.",
+     "1": "David Levy, seventy-two, did not go down to the shelter.",
+     "2": "Not because I didn't take shelter. Because the war came looking for me.",
+     "3": "Civilians never choose war. War always chooses civilians."
+    }
+   },
+   "6": {
+    "place": "Southern Lebanon · The Border Zone",
+    "time": "March 17, 2026 · 2:20 PM",
+    "title": "A Line Being Erased",
+    "lines": {
+     "0": "The Merkava tanks were ominously quiet.",
+     "1": "This was not an air strike. It came across the ground.",
+     "2": "A border is a line on a map.",
+     "3": "Tank treads roll over it, and the line is erased."
+    }
+   },
+   "7": {
+    "place": "UNICEF, New York → Iran and Lebanon",
+    "time": "March 17, 2026 · Afternoon",
+    "title": "Numbers Without Names",
+    "lines": {
+     "0": "Children killed or wounded: more than 1,100.",
+     "1": "The report had no names. Numbers are tidy.",
+     "2": "Children don't know why anyone is fighting. Adults think they do."
+    }
+   },
+   "8": {
+    "place": "Nowhere",
+    "time": "March 17, 2026 · Early morning",
+    "title": "The Language of War",
+    "lines": {
+     "0": "A reed only sings once it has been torn from the reed bed.",
+     "1": "Whether it's a melody or a scream depends on the ear that hears it.",
+     "2": "The cruelest moment of war is when we get used to it.",
+     "3": "Continued in Episode 7."
+    }
+   }
+  }
+ },
+ "jp": {
+  "ui": {
+   "l0": "EPIC FURY · 仮想戦記",
+   "l1": "エピック・フューリー",
+   "l2": "ホルムズの夜",
+   "ep": "第6話 · ラリジャニの朝",
+   "foot": "続きは<b>プロフィールのリンク</b>から",
+   "scene": "シーン {n} / 8",
+   "end": "第7話へ続く",
+   "sans": "Noto Sans JP",
+   "serif": "Noto Serif JP",
+   "fonts": "family=Noto+Sans+JP:wght@600;700;800;900&family=Noto+Serif+JP:wght@700;900",
+   "capfs": 108
+  },
+  "scenes": {
+   "1": {
+    "place": "ワシントンD.C. · ホワイトハウス危機管理室",
+    "time": "2026.03.16 · 深夜0時47分",
+    "title": "誰も立ち上がらない瞬間",
+    "lines": {
+     "0": "14台のモニターが、同時に赤く染まった。",
+     "1": "「NATOが抜けました。日本も、韓国も、オーストラリアも」",
+     "2": "同盟は体制であり、体制は常に自らの利益の方向へ流れる。",
+     "3": "一人で始めた戦争は、一人で終わらせる。"
+    }
+   },
+   "2": {
+    "place": "ソウル · 外交部長官執務室",
+    "time": "2026.03.16 · 午前8時30分",
+    "title": "二行の電報",
+    "lines": {
+     "0": "米国大使館からの電報は二行だった。ホルムズ作戦への参加要請。",
+     "1": "返電はすでに彼の名で送られていた。",
+     "2": "「支持はするが、参加はしない。それで終わりだ」",
+     "3": "拒絶はいつも、体裁の整った文書で行われる。"
+    }
+   },
+   "3": {
+    "place": "クウェート市 · サルミヤ住宅地区",
+    "time": "2026.03.16 · 午後11時47分",
+    "title": "停電の夜",
+    "lines": {
+     "0": "子どもたちは眠っていた。そして天井が揺れた。",
+     "1": "5歳の末っ子が泣いた。なぜ泣くのか、自分でもわからなかった。",
+     "2": "隣の建物から煙が上がり、明かりはなかった。",
+     "3": "戦争が生む闇の中で泣くのは、いつも子どもたちだ。"
+    }
+   },
+   "4": {
+    "place": "テヘラン北部上空 · F-35Iコックピット",
+    "time": "2026.03.17 · 未明3時18分",
+    "title": "二本指の規定",
+    "lines": {
+     "0": "パイロットは座標を確認した。もう一度確認した。",
+     "1": "リリースボタンは二本の指で押す。一本なら過ち、二本なら決定。",
+     "2": "午前5時12分、イラン国営テレビがラリジャニの死亡を確認した。",
+     "3": "イラン核交渉の最も古い窓口が閉じた。"
+    }
+   },
+   "5": {
+    "place": "イスラエル・ラマトガン · 住宅街",
+    "time": "2026.03.17 · 午前6時41分",
+    "title": "戦争が訪ねてきた朝",
+    "lines": {
+     "0": "報復は1時間42分後に始まった。",
+     "1": "72歳のダビド・レビは、避難所に降りなかった。",
+     "2": "避難しなかったからではない。戦争の方が自分を訪ねてきたのだ。",
+     "3": "民間人は戦争を選ばない。戦争はいつも民間人を選ぶ。"
+    }
+   },
+   "6": {
+    "place": "レバノン南部 · 国境地帯",
+    "time": "2026.03.17 · 午後2時20分",
+    "title": "消されていく線",
+    "lines": {
+     "0": "メルカバ戦車は、不吉なほど静かだった。",
+     "1": "これは空爆ではなかった。地上から押し寄せてきた。",
+     "2": "国境とは、地図の上の線だ。",
+     "3": "履帯がその線を越え、線は消されていく。"
+    }
+   },
+   "7": {
+    "place": "ユニセフ本部 → イラン・レバノン",
+    "time": "2026.03.17 · 午後",
+    "title": "名前のない数字",
+    "lines": {
+     "0": "死傷した子ども、1,100人以上。",
+     "1": "報告書に名前はなかった。数字はきれいに整っていた。",
+     "2": "子どもたちはなぜ戦うのかを知らない。大人たちは知っていると思っている。"
+    }
+   },
+   "8": {
+    "place": "どこでもない場所",
+    "time": "2026.03.17 · 早朝",
+    "title": "戦争の言葉",
+    "lines": {
+     "0": "葦は引き抜かれて初めて音を出す。",
+     "1": "それが調べか叫びかは、聞く者の耳にかかっている。",
+     "2": "戦争が最も残酷なのは、私たちがそれに慣れてしまう時だ。",
+     "3": "第7話へ続く"
+    }
+   }
+  }
+ }
+}
