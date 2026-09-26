@@ -1,0 +1,235 @@
+{
+ "T": 135.762855,
+ "scenes": [
+  {
+   "n": 1,
+   "start": 1.2,
+   "end": 15.85347,
+   "lines": [
+    {
+     "i": 3,
+     "f": "/home/claude/ep02s/audio/lines_jp/s01_03.mp3",
+     "a0": 1.2,
+     "a1": 6.711837
+    },
+    {
+     "i": 4,
+     "f": "/home/claude/ep02s/audio/lines_jp/s01_04.mp3",
+     "a0": 6.991837,
+     "a1": 9.499592
+    },
+    {
+     "i": 5,
+     "f": "/home/claude/ep02s/audio/lines_jp/s01_05.mp3",
+     "a0": 9.779592000000001,
+     "a1": 11.268572
+    },
+    {
+     "i": 8,
+     "f": "/home/claude/ep02s/audio/lines_jp/s01_08.mp3",
+     "a0": 11.548572,
+     "a1": 15.15347
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "start": 15.85347,
+   "end": 25.394286,
+   "lines": [
+    {
+     "i": 0,
+     "f": "/home/claude/ep02s/audio/lines_jp/s02_00.mp3",
+     "a0": 15.85347,
+     "a1": 18.073878
+    },
+    {
+     "i": 3,
+     "f": "/home/claude/ep02s/audio/lines_jp/s02_03.mp3",
+     "a0": 18.353878,
+     "a1": 21.723674000000003
+    },
+    {
+     "i": 7,
+     "f": "/home/claude/ep02s/audio/lines_jp/s02_07.mp3",
+     "a0": 22.003674000000004,
+     "a1": 24.694286000000005
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "start": 25.394286,
+   "end": 47.231428,
+   "lines": [
+    {
+     "i": 0,
+     "f": "/home/claude/ep02s/audio/lines_jp/s03_00.mp3",
+     "a0": 25.394286,
+     "a1": 30.017959
+    },
+    {
+     "i": 3,
+     "f": "/home/claude/ep02s/audio/lines_jp/s03_03.mp3",
+     "a0": 30.297959000000002,
+     "a1": 37.220408000000006
+    },
+    {
+     "i": 4,
+     "f": "/home/claude/ep02s/audio/lines_jp/s03_04.mp3",
+     "a0": 37.500408,
+     "a1": 42.881631999999996
+    },
+    {
+     "i": 6,
+     "f": "/home/claude/ep02s/audio/lines_jp/s03_06.mp3",
+     "a0": 43.161632,
+     "a1": 46.531428
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "start": 47.231428,
+   "end": 63.81795800000001,
+   "lines": [
+    {
+     "i": 2,
+     "f": "/home/claude/ep02s/audio/lines_jp/s04_02.mp3",
+     "a0": 47.231428,
+     "a1": 50.052652
+    },
+    {
+     "i": 3,
+     "f": "/home/claude/ep02s/audio/lines_jp/s04_03.mp3",
+     "a0": 50.332652,
+     "a1": 56.497550000000004
+    },
+    {
+     "i": 4,
+     "f": "/home/claude/ep02s/audio/lines_jp/s04_04.mp3",
+     "a0": 56.777550000000005,
+     "a1": 58.893468000000006
+    },
+    {
+     "i": 7,
+     "f": "/home/claude/ep02s/audio/lines_jp/s04_07.mp3",
+     "a0": 59.17346800000001,
+     "a1": 63.11795800000001
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "start": 63.81795800000001,
+   "end": 80.71795800000001,
+   "lines": [
+    {
+     "i": 1,
+     "f": "/home/claude/ep02s/audio/lines_jp/s05_01.mp3",
+     "a0": 63.81795800000001,
+     "a1": 66.351836
+    },
+    {
+     "i": 2,
+     "f": "/home/claude/ep02s/audio/lines_jp/s05_02.mp3",
+     "a0": 66.631836,
+     "a1": 71.307754
+    },
+    {
+     "i": 6,
+     "f": "/home/claude/ep02s/audio/lines_jp/s05_06.mp3",
+     "a0": 71.587754,
+     "a1": 76.02857
+    },
+    {
+     "i": 7,
+     "f": "/home/claude/ep02s/audio/lines_jp/s05_07.mp3",
+     "a0": 76.30857,
+     "a1": 80.01795800000001
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "start": 80.71795800000001,
+   "end": 94.438366,
+   "lines": [
+    {
+     "i": 3,
+     "f": "/home/claude/ep02s/audio/lines_jp/s06_03.mp3",
+     "a0": 80.71795800000001,
+     "a1": 82.703264
+    },
+    {
+     "i": 4,
+     "f": "/home/claude/ep02s/audio/lines_jp/s06_04.mp3",
+     "a0": 82.983264,
+     "a1": 88.547346
+    },
+    {
+     "i": 6,
+     "f": "/home/claude/ep02s/audio/lines_jp/s06_06.mp3",
+     "a0": 88.827346,
+     "a1": 93.738366
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "start": 94.438366,
+   "end": 113.696732,
+   "lines": [
+    {
+     "i": 0,
+     "f": "/home/claude/ep02s/audio/lines_jp/s07_00.mp3",
+     "a0": 94.438366,
+     "a1": 99.58448800000001
+    },
+    {
+     "i": 2,
+     "f": "/home/claude/ep02s/audio/lines_jp/s07_02.mp3",
+     "a0": 99.86448800000001,
+     "a1": 107.80571200000001
+    },
+    {
+     "i": 5,
+     "f": "/home/claude/ep02s/audio/lines_jp/s07_05.mp3",
+     "a0": 108.085712,
+     "a1": 112.996732
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "start": 113.696732,
+   "end": 134.462855,
+   "lines": [
+    {
+     "i": 1,
+     "f": "/home/claude/ep02s/audio/lines_jp/s08_01.mp3",
+     "a0": 113.696732,
+     "a1": 120.384079
+    },
+    {
+     "i": 3,
+     "f": "/home/claude/ep02s/audio/lines_jp/s08_03.mp3",
+     "a0": 120.664079,
+     "a1": 125.914691
+    },
+    {
+     "i": 5,
+     "f": "/home/claude/ep02s/audio/lines_jp/s08_05.mp3",
+     "a0": 126.194691,
+     "a1": 132.04612
+    },
+    {
+     "i": 7,
+     "f": "/home/claude/ep02s/audio/lines_jp/s08_07.mp3",
+     "a0": 132.32612,
+     "a1": 133.762855
+    }
+   ]
+  }
+ ]
+}
