@@ -1,0 +1,4 @@
+EP02 shorts voices
+kr: Typecast Inhwa (ssfm-v30)
+en: ElevenLabs Bill (pqHfZKP75CvOlQylNhV4), eleven_multilingual_v2
+jp: ElevenLabs HIRO - Cool Japanese Male Voice (Bj4Malc5SZLoXfPtxRxH), eleven_multilingual_v2, language_code=ja

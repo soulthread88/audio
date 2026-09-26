@@ -1,0 +1,206 @@
+{
+ "en": {
+  "ui": {
+   "l0": "EPIC FURY · WAR FICTION",
+   "l1": "EPIC FURY",
+   "l2": "NIGHT OVER HORMUZ",
+   "ep": "Episode 2 · The Mathematics of Decapitation",
+   "foot": "Full story — <b>link in profile</b>",
+   "scene": "SCENE {n} / 8",
+   "end": "Continued in Episode 3",
+   "sans": "Inter",
+   "serif": "Source Serif 4",
+   "fonts": "family=Inter:wght@600;700;800;900&family=Source+Serif+4:ital,wght@0,700;0,900;1,700",
+   "capfs": 104
+  },
+  "scenes": {
+   "1": {
+    "place": "Langley, Virginia · CIA Iran Operations Center",
+    "time": "March 1, 2026 · 3:12 AM EST",
+    "title": "Fordow Was Still Alive",
+    "lines": {
+     "3": "The signal cut out, came back, and pulsed every 5.7 seconds — like a heartbeat.",
+     "4": "It was the signature of spinning centrifuges.",
+     "5": "Fordow was still alive.",
+     "8": "Someone had chosen not to shut the centrifuges down."
+    }
+   },
+   "2": {
+    "place": "Tehran · IRGC Emergency Command Post",
+    "time": "March 1, 2026 · 11:58 AM",
+    "title": "The Dead Man's Son",
+    "lines": {
+     "0": "The dead man's son was alive.",
+     "3": "Operation 'Promise of Truth 4' was launched.",
+     "7": "Outside the bunker, Tehran was burning."
+    }
+   },
+   "3": {
+    "place": "Bahrain · U.S. Fifth Fleet HQ",
+    "time": "March 1, 2026 · 2:30 PM",
+    "title": "The Longest 90 Seconds",
+    "lines": {
+     "0": "Captain Kim Junho was in the restroom when the missile sirens went off.",
+     "3": "The ballistic missiles were already airborne. Six. Twelve. The count kept climbing.",
+     "4": "The target: Mina Salman. Fifth Fleet headquarters. Where he stood.",
+     "6": "He gripped the leg of a desk. His hands were shaking."
+    }
+   },
+   "4": {
+    "place": "Tehran · Valiasr Avenue",
+    "time": "March 1, 2026 · 3:45 PM",
+    "title": "People Can Stop",
+    "lines": {
+     "2": "\"Freedom! Freedom! Iran is free!\"",
+     "3": "Something held down for forty-seven years broke loose before the bombs did.",
+     "4": "And then the Basij came.",
+     "7": "Bombs don't stop. But people can."
+    }
+   },
+   "5": {
+    "place": "Gulf of Oman · Bridge of USS Gerald R. Ford",
+    "time": "March 2, 2026 · 6:44 AM",
+    "title": "The World's Throat",
+    "lines": {
+     "1": "The Strait of Hormuz was effectively sealed.",
+     "2": "On day three of the war, oil broke $150 a barrel.",
+     "6": "\"Your drones made that.\" Not an accusation — a fact.",
+     "7": "He didn't answer. The silence was the answer."
+    }
+   },
+   "6": {
+    "place": "12,000 Feet Over Tehran",
+    "time": "March 3, 2026 · 7:22 AM",
+    "title": "34 Seconds That Became History",
+    "lines": {
+     "3": "The engagement lasted thirty-four seconds.",
+     "4": "It was the first time in history an F‑35 had shot down a manned fighter in combat.",
+     "6": "What was inside those thirty-four seconds, she left out of her radio report."
+    }
+   },
+   "7": {
+    "place": "University of Tehran · Philosophy Department",
+    "time": "March 3, 2026 · 11:10 AM",
+    "title": "A Page Filled After 53 Years",
+    "lines": {
+     "0": "For the first time in fifty-three years, Professor Azad Moradi opened his desk drawer.",
+     "2": "Outside, students were singing. No hijabs. Men and women together. The first time in forty-seven years.",
+     "5": "A bomb ends in destruction. A song is the will to build something."
+    }
+   },
+   "8": {
+    "place": "Langley, Virginia · CIA Emergency Briefing Room",
+    "time": "March 3, 2026 · 6:55 AM EST",
+    "title": "Between Two Skies",
+    "lines": {
+     "1": "Conclusion: better than 85 percent odds that part of Fordow is still running.",
+     "3": "\"That's not my call. I provide the intelligence.\"",
+     "5": "The Virginia sky was blue. Five thousand six hundred miles away, the sky over Tehran was black.",
+     "7": "Continued in Episode 3."
+    }
+   }
+  }
+ },
+ "jp": {
+  "ui": {
+   "l0": "EPIC FURY · 仮想戦記",
+   "l1": "エピック・フューリー",
+   "l2": "ホルムズの夜",
+   "ep": "第2話 · 斬首の数学",
+   "foot": "続きは<b>プロフィールのリンク</b>から",
+   "scene": "シーン {n} / 8",
+   "end": "第3話へ続く",
+   "sans": "Noto Sans JP",
+   "serif": "Noto Serif JP",
+   "fonts": "family=Noto+Sans+JP:wght@600;700;800;900&family=Noto+Serif+JP:wght@700;900",
+   "capfs": 108
+  },
+  "scenes": {
+   "1": {
+    "place": "米国ラングレー · CIAイラン作戦センター",
+    "time": "2026.03.01 · 午前3:12(米東部)",
+    "title": "フォルドウは生きていた",
+    "lines": {
+     "3": "信号は途切れ、また現れ、5.7秒間隔で脈のように繰り返された。",
+     "4": "遠心分離機の稼働信号だった。",
+     "5": "フォルドウは生きていた。",
+     "8": "誰かが、遠心分離機を止めないことを選んだのだ。"
+    }
+   },
+   "2": {
+    "place": "テヘラン · IRGC非常指揮統制所",
+    "time": "2026.03.01 · 午前11:58",
+    "title": "死者の息子",
+    "lines": {
+     "0": "死者の息子は、生きていた。",
+     "3": "作戦名「真実の約束4」が発動された。",
+     "7": "バンカーの外で、テヘランは燃えていた。"
+    }
+   },
+   "3": {
+    "place": "バーレーン · 米第5艦隊司令部",
+    "time": "2026.03.01 · 午後2:30",
+    "title": "最も長い90秒",
+    "lines": {
+     "0": "ミサイル警報のサイレンが鳴った時、キム・ジュンホ大尉は化粧室にいた。",
+     "3": "弾道ミサイルはすでに空にあった。6発。12発。数は増え続けた。",
+     "4": "標的はミナサルマン港。第5艦隊基地。彼のいる場所だった。",
+     "6": "彼は机の脚をつかんでいた。手が震えていた。"
+    }
+   },
+   "4": {
+    "place": "テヘラン · ヴァリアスル大通り",
+    "time": "2026.03.01 · 午後3:45",
+    "title": "人は止まれる",
+    "lines": {
+     "2": "「自由だ！自由だ！イランは自由だ！」",
+     "3": "47年間、喉元で押さえつけられていた何かが、爆弾より先に外へ溢れ出た。",
+     "4": "そして、バシジがやって来た。",
+     "7": "爆弾は止まらない。だが人は、止まることができる。"
+    }
+   },
+   "5": {
+    "place": "オマーン湾 · 空母フォード艦橋",
+    "time": "2026.03.02 · 午前6:44",
+    "title": "世界の喉笛",
+    "lines": {
+     "1": "ホルムズ海峡は事実上封鎖された。",
+     "2": "開戦3日目、原油価格は1バレル150ドルを突破した。",
+     "6": "「あなたのドローンがやったのよ」。非難ではなく、事実として。",
+     "7": "彼は答えなかった。答えがないことが、答えだった。"
+    }
+   },
+   "6": {
+    "place": "テヘラン上空 1万2千フィート",
+    "time": "2026.03.03 · 午前7:22",
+    "title": "歴史になった34秒",
+    "lines": {
+     "3": "交戦は34秒だった。",
+     "4": "F‑35が実戦で有人戦闘機を撃墜したのは、人類史上初めてだった。",
+     "6": "その34秒に何があったのか、彼女は無線報告に含めなかった。"
+    }
+   },
+   "7": {
+    "place": "テヘラン大学 · 哲学科研究室",
+    "time": "2026.03.03 · 午前11:10",
+    "title": "53年ぶりに埋まったページ",
+    "lines": {
+     "0": "アーザード・モラディ教授は、53年ぶりに初めて研究室の机の引き出しを開けた。",
+     "2": "窓の外で学生たちが歌っていた。ヒジャブなしで。男女が共に。47年ぶりのことだった。",
+     "5": "爆弾は破壊で終わる。歌は、何かを築こうとする意志だ。"
+    }
+   },
+   "8": {
+    "place": "米国ラングレー · CIA非常会議室",
+    "time": "2026.03.03 · 午前6:55(米東部)",
+    "title": "二つの空のあいだ",
+    "lines": {
+     "1": "結論。フォルドウ地下施設の一部が今も稼働している可能性、85%以上。",
+     "3": "「それは私が決めることではありません。私は情報を提供するだけです」",
+     "5": "バージニアの空は青かった。5,600マイル離れたテヘランの空は、黒かった。",
+     "7": "第3話へ続く。"
+    }
+   }
+  }
+ }
+}

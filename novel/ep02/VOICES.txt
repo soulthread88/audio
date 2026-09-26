@@ -1,0 +1,4 @@
+EP02 narration
+en: ElevenLabs Bill (pqHfZKP75CvOlQylNhV4), eleven_multilingual_v2
+jp: ElevenLabs Brian premade (nPczCjzI2devNBz1zQrb), eleven_multilingual_v2, language_code=ja — provisional; Hiro library voice requires paid ElevenLabs plan
+kr: Typecast Inhwa (tc_6296a815b958a8ed9610b189), ssfm-v30, normal
